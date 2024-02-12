@@ -27,20 +27,19 @@ function dividir(num1, num2) {
 function calculadora() {
     var operacion;
 
-    // Bucle para permitir al usuario realizar múltiples operaciones
     do {
         operacion = prompt("Seleccione la operación que desea realizar:\n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n5. Salir de la operación");
         
-        // Convertir la entrada del usuario a un número entero
+        // Convertir a un número entero
         operacion = parseInt(operacion);
 
-        // Verificar si el usuario desea salir de la operación
+        // Si el usuario quiere salir de la operación.
         if (operacion === 5) {
-            // Salir del bucle y terminar la calculadora
+            // Salir de la calculadora.
             break;
         }
 
-        // Verificar si la operación es válida
+        // Si la operación es válida.
         if (operacion >= 1 && operacion <= 4) {
             var num1 = parseFloat(prompt("Ingrese el primer número:"));
             var num2 = parseFloat(prompt("Ingrese el segundo número:"));
@@ -62,7 +61,7 @@ function calculadora() {
                     break;
             }
 
-            // Mostrar el resultado al usuario
+            // Mostrar el resultado.
             alert("El resultado es: " + resultado);
         } else if (operacion !== 5) {
             // Mostrar un mensaje de error si la operación no es válida
@@ -71,7 +70,6 @@ function calculadora() {
     } while (operacion !== 5);
 }
 
-// Llamar a la función para iniciar la calculadora
 calculadora();
 
 
